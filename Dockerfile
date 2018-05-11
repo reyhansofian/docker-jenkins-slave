@@ -32,9 +32,9 @@ COPY bootstrap bootstrap
 RUN chmod +x -Rv bootstrap
 
 # Add user jenkins to the image
-RUN adduser --quiet jenkins
-RUN adduser jenkins sudo
-RUN echo "jenkins:jenkins" | chpasswd
+# RUN adduser --quiet jenkins
+# RUN adduser jenkins sudo
+# RUN echo "jenkins:jenkins" | chpasswd
 
 # NVM
 RUN mkdir -p /opt/nvm
