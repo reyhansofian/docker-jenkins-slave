@@ -55,17 +55,12 @@ RUN apt-get update -y
 RUN apt-get install -y -q \
   libc6 \
   libfontconfig1 \
-  xul-ext-ubufox \
   libcanberra0 \
   firefox \
   google-chrome-stable \
   openjdk-8-jre-headless \
   x11vnc \
-  xvfb \
-  xfonts-100dpi \
-  xfonts-75dpi \
-  xfonts-scalable \
-  xfonts-cyrillic
+  xvfb
 
 # Shim chrome to disable sandbox
 # See https://github.com/docker/docker/issues/1079
