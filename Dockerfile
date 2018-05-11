@@ -2,6 +2,7 @@ FROM jenkins/jenkins:lts
 
 ENV DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true
 
+USER root
 RUN apt-get clean && apt-get update && apt-get install -y locales
 RUN locale-gen --purge en_US.UTF-8
 RUN dpkg-reconfigure locales
@@ -29,8 +30,6 @@ RUN add-apt-repository -y ppa:mozillateam/firefox-next
 # Load scripts
 COPY bootstrap bootstrap
 RUN chmod +x -Rv bootstrap
-
-USER root
 
 # Add user jenkins to the image
 RUN adduser --quiet jenkins
@@ -78,3 +77,5 @@ RUN chmod +x /etc/init.d/xvfb
 COPY versions.sh /tmp/versions.sh
 RUN chmod +x /tmp/versions.sh
 RUN /tmp/versions.sh
+
+USER jenkins
