@@ -56,7 +56,7 @@ RUN apt-get install -y -q \
   libc6 \
   libfontconfig1 \
   libcanberra0 \
-  firefox \
+  # firefox \
   google-chrome-stable \
   openjdk-8-jre-headless \
   x11vnc \
