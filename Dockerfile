@@ -14,7 +14,7 @@ COPY locale /etc/default/locale
 
 #RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/sources.list
 RUN apt-get -qq update
-RUN apt-get -y -q install build-essential python-software-properties software-properties-common wget curl git fontconfig
+RUN apt-get -y -q install build-essential software-properties-common wget curl git fontconfig
 RUN add-apt-repository -y ppa:mozillateam/firefox-next
 
 # Maven 3.0.5
