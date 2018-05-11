@@ -53,6 +53,10 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
 RUN echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list
 RUN apt-get update -y
 RUN apt-get install -y -q \
+  libc6 \
+  libfontconfig1 \
+  xul-ext-ubufox \
+  libcanberra0 \
   firefox \
   google-chrome-stable \
   openjdk-8-jre-headless \
