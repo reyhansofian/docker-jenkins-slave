@@ -43,10 +43,10 @@ RUN ./bootstrap/nvm.sh
 RUN echo "source /opt/nvm/nvm.sh" >> /root/.profile
 
 # Adjust perms for jenkins user
-RUN chown -R jenkins /opt/nvm
-RUN touch /home/jenkins/.profile
-RUN echo "source /opt/nvm/nvm.sh" >> /home/jenkins/.profile
-RUN chown jenkins /home/jenkins/.profile
+# RUN chown -R jenkins /opt/nvm
+# RUN touch /home/jenkins/.profile
+# RUN echo "source /opt/nvm/nvm.sh" >> /home/jenkins/.profile
+# RUN chown jenkins /home/jenkins/.profile
 
 # Browsers
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
